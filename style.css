@@ -8,9 +8,11 @@
 }
 
 body {
-    display: flex;
-    flex-direction: column;
+    background: var(--bg-color);
+    margin: 0;
+    padding: 0;
     min-height: 100vh;
+    overflow-x: hidden;
 }
 
 main {
@@ -199,10 +201,17 @@ nav .hamburger.active .bar {
     outline: none;
     cursor: pointer;
     transition: 0.3s ease-in;
-}
+} 
+
 
 
 .left .btn button:hover {
+    transform: translateY(-7px);
+    color: var(--text-color);
+    background: transparent;
+}
+
+button .ola:hover {
     transform: translateY(-7px);
     color: var(--text-color);
     background: transparent;
@@ -229,7 +238,7 @@ nav .hamburger.active .bar {
 
 .skills {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     z-index: -1;
     background: var(--bg-color);
 }
@@ -294,7 +303,7 @@ nav .hamburger.active .bar {
 
 .courses {
     width: 100%;
-    height: 190vh;
+    min-height: 190vh;
     z-index: -1;
     background: var(--bg-color);
 }
@@ -610,7 +619,13 @@ footer {
     color: #ddd;
 }
 
+
 /* Media Screen */
+
+.home, .contact, .courses, .skills {
+    margin: 0;
+    padding: 0;
+}
 
 @media screen and (max-width: 1280px) {
     nav {
@@ -713,6 +728,10 @@ footer {
     .projects h2 {
         font-size: 2.5rem;
     }
+
+    .courses {
+        height: 510vh;
+    }
 }
 
 @media screen and (max-width: 767px) { 
@@ -751,6 +770,10 @@ footer {
 
     .projects h2 {
         font-size: 2rem;
+    }
+
+    .courses {
+        min-height: 910vh;
     }
 }
 
@@ -795,5 +818,9 @@ footer {
     .right .profile img, .left .profile img {
         width: 300px;
         height: 300px;
+    }
+
+    .courses {
+        height: 930vh;
     }
 }
