@@ -91,6 +91,7 @@ nav ul li a:hover {
 nav .hamburger {
     position: relative;
     width: 30px;
+    height: 30px;
     cursor: pointer;
     appearance: none;
     background: none;
@@ -105,23 +106,42 @@ nav .hamburger::after,
 nav .hamburger::before {
     content: '';
     display: block;
-    width: 100%;
+    width: 30px;
     height: 3px;
     background: var(--white);
     margin: 6px 0;
     transition: 0.4s;
 }
 
+nav .hamburger .bar {
+    position: relative;
+}
+
+nav .hamburger::before,
+nav .hamburger::after {
+    position: absolute;
+    left: 0;
+}
+
+
 nav .hamburger::before {
-    transform: rotate(-45deg) translate(-8px, 5px);
+    top: -10px;
 }
 
 nav .hamburger::after {
-    transform: rotate(45deg) translate(-8px, -5px);
+    top: 10px;
 }
 
 nav .hamburger.active .bar {
     opacity: 0;
+}
+
+nav .hamburger.active::before {
+    transform: rotate(45deg); /* Rota para formar una "X" cuando está activo */
+}
+
+nav .hamburger.active::after {
+    transform: rotate(-45deg); /* Rota para formar una "X" cuando está activo */
 }
 
 
