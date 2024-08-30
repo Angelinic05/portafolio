@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono:wght@788&display=swap');
 
 * {
+    
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -8,15 +9,14 @@
 }
 
 body {
-    background: var(--bg-color);
-    margin: 0;
-    padding: 0;
+    display: flex;
+    flex-direction: column;
     min-height: 100vh;
-    overflow-x: hidden;
 }
 
 main {
     flex: 1;
+    background-color: var(--bg-color);
 }
 
 :root {
@@ -149,12 +149,12 @@ nav .hamburger.active::after {
 
 .home {
     background: var(--bg-color);
-    position: absolute;
-    top: 0;
     width: 100%;
-    height: 100vh;
-    z-index: -1;
-    padding: 150px 0 50px;
+    height: 70vh; 
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    overflow: hidden; 
 }
 
 .home .home-info {
@@ -431,12 +431,12 @@ button .ola:hover {
 /* CONTACTO */
 .contact {
     background: var(--bg-color);
-    position: absolute;
-    top: 0;
     width: 100%;
-    height: 100vh;
-    z-index: -1;
-    padding: 150px 0 50px;
+    height: 70vh; 
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    overflow: hidden; 
 }
 
 .contact .contact-info {
