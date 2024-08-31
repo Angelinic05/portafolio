@@ -682,6 +682,86 @@ footer {
 
 }
 
+/* SOBRE MÍ */
+.about {
+    background: var(--bg-color);
+    width: 100%;
+    padding: 50px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.about .container {
+    max-width: 1200px;
+    width: 100%;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 3rem;
+    color: var(--white);
+    margin-bottom: 40px;
+}
+
+.about-cards {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.about-card {
+    background: var(--mob-color);
+    color: var(--white);
+    padding: 20px;
+    border-radius: 10px;
+    width: 30%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-card h3 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+/* Estilos específicos para la tarjeta de valores con lista */
+.about-card ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.about-card ul li {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.about-card ul li strong {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.about-card p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.about-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Responsividad para móviles */
+@media screen and (max-width: 768px) {
+    .about-card {
+        width: 100%;
+    }
+}
+
+
 
 
 @media screen and (max-width: 992px) {
@@ -752,6 +832,10 @@ footer {
     .courses {
         height: 510vh;
     }
+    .about-card {
+        width: 100%; /* Asegura que las tarjetas ocupen todo el ancho disponible en pantallas más pequeñas */
+        margin-bottom: 20px; /* Añade espacio entre las tarjetas */
+    }
 }
 
 @media screen and (max-width: 767px) { 
@@ -794,6 +878,14 @@ footer {
 
     .courses {
         min-height: 910vh;
+    }
+    .about-card {
+        width: 100%; /* Asegura que las tarjetas ocupen todo el ancho disponible en pantallas más pequeñas */
+        margin-bottom: 20px; /* Añade espacio entre las tarjetas */
+    }
+
+    .about {
+        padding: 30px; /* Ajusta el padding de la sección 'about' para pantallas más pequeñas */
     }
 }
 
@@ -843,4 +935,12 @@ footer {
     .courses {
         height: 930vh;
     }
+    .about-card {
+        width: 100%; /* Asegura que las tarjetas ocupen todo el ancho disponible en pantallas más pequeñas */
+        margin-bottom: 15px; /* Añade un poco menos de espacio entre las tarjetas para pantallas más pequeñas */
+    }
+
+    .about {
+        padding: 20px; /* Ajusta aún más el padding de la sección 'about' para pantallas muy pequeñas */
+    }   
 }
