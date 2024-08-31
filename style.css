@@ -716,8 +716,9 @@ footer {
     padding: 20px;
     border-radius: 10px;
     width: 30%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--text-color);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+
 }
 
 .about-card h3 {
@@ -751,7 +752,7 @@ footer {
 
 .about-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0 20px var(--text-color);
 }
 
 /* Responsividad para móviles */
